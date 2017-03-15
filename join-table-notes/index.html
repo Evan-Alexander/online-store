@@ -1,0 +1,25 @@
+<a "First page is rendered as /.  We are collecting all the categories and tasks and connecting them to the links below.  If you click on a link below they will direct you to two different pages, /categories and /tasks, respectively"></a>
+$app->get("/", function() use ($app) {
+    return $app['twig']->render('index.html.twig', array('categories' => Category::getAll(), 'tasks' => Task::getAll()));
+});
+
+<html>
+<head>
+    <title>To Do List</title>
+</head>
+<body>
+    <h1>Welcome to To Do List</h1>
+
+    <h3><a href="/categories">Add or view a category</a></h3>
+    <h3><a href="/tasks">Add or view a task</a></h3>
+
+</body>
+</html>
+
+<a href="These pages are initially loaded with these two steps.  Again, we are gathering all the info and loading it to a new page.  Each created in their own file."></a>
+$app->get("/tasks", function() use ($app) {
+    return $app['twig']->render('tasks.html.twig', array('tasks' => Task::getAll()));
+});
+
+$app->get("/categories", function() use ($app) {
+    return $app['twig']->render('categories.html.twig', array('categories' => Category::getAll()));
