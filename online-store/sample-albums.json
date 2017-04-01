@@ -1,0 +1,17 @@
+{ "albums": [{
+    "title": "Animals",
+    "artist": "Pink Floyd",
+    "description": "Waters speaks his mind, classifying people into 5 species of animals.",
+    "id": "1"
+    }, {
+    "title": "Meddle",
+    "artist": "Pink Floyd",
+    "description": "Experimental album including a very widely accepted amazing tune.",
+    "id": "2"
+  }, {
+    "title": "Ziggy Stardust",
+    "artist": "David Bowie",
+    "description": "First concept album ever made and damn, its so good!",
+    "id": "3"
+  }]
+}
